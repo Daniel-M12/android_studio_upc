@@ -46,12 +46,19 @@ public class TripAdapter extends RecyclerView.Adapter<TripAdapter.MyViewHolder> 
             estacionDestino = trip.getCorredor();
         }
 
-        holder.editEstacionDestino.setText("Estación destino: " + estacionDestino);
+        holder.editEstacionDestino.setText("Destino: " + estacionDestino);
         holder.editHora.setText("Hora: " + trip.getHora());
         holder.rowDate.setText("Fecha: " + trip.getFecha());
 
         holder.btnEdit.setOnClickListener(view -> {
-            // TODO: Implementar la funcionalidad para editar
+            Intent detailIntent = new Intent(context, TripDetailMapActivity.class);
+
+            detailIntent.putExtra("tren", trip.getTren());
+            detailIntent.putExtra("metropolitano", trip.getMetropolitano());
+            detailIntent.putExtra("corredor", trip.getCorredor());
+            detailIntent.putExtra("fecha", trip.getFecha());
+            detailIntent.putExtra("hora", trip.getHora());
+            context.startActivity(detailIntent);
         });
 
         holder.btnDelete.setOnClickListener(v -> {
