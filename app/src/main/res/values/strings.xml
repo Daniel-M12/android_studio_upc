@@ -1,0 +1,58 @@
+<resources>
+    <string name="app_name">Final - grupo7</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">*********</string>
+    <string name="action_sign_in">Iniciar sesión</string>
+    <string name="action_sign_in_short">Iniciar sesión</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+    <string-array name="tren_options">
+        <item>Por favor seleccione</item>
+        <item>Villa El Salvador</item>
+        <item>Parque Industrial</item>
+        <item>María Auxiliadora</item>
+        <item>San Juan</item>
+        <item>Jorge Chávez</item>
+        <item>Ayacucho</item>
+        <item>Angamos</item>
+        <item>Cabitos</item>
+        <item>San Borja Sur</item>
+        <item>La Cultura</item>
+        <item>Arriola</item>
+        <item>Gamarra</item>
+        <item>Miguel Grau</item>
+        <item>El Ángel</item>
+        <item>Caja de Agua</item>
+        <item>Pirámide del Sol</item>
+        <item>Los Jardines</item>
+        <item>Los Postes</item>
+        <item>San Carlos</item>
+        <item>San Martín</item>
+        <item>Santa Rosa</item>
+        <item>Bayóvar</item>
+        <item>Presbítero Maestro</item>
+        <item>Grau</item>
+        <item>Colmena</item>
+    </string-array>
+
+    <string-array name="metropolitano_options">
+        <item>Por favor seleccione</item>
+        <item>Naranjal</item>
+        <item>Izaguirre</item>
+        <item>Central</item>
+        <item>Jirón de la Unión</item>
+        <item>Estadio Nacional</item>
+        <item>Matellini</item>
+    </string-array>
+
+    <string-array name="corredor_options">
+        <item>Por favor seleccione</item>
+        <item>Corredor Azul</item>
+        <item>Corredor Rojo</item>
+        <item>Corredor Verde</item>
+    </string-array>
+</resources>
