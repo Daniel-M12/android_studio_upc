@@ -1,6 +1,8 @@
 package com.juancarlosgonzales.final_grupo7;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,12 +10,27 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.view.View;
 
-public class TripDetailMapActivity extends AppCompatActivity {
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+
+public class TripDetailMapActivity extends FragmentActivity implements OnMapReadyCallback {
+
+    private GoogleMap mMap;
+    float latitud, longitud;
+    String titulo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trip_detail_map);
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.mapa);
+        mapFragment.getMapAsync(this);
+
 
         Intent intent = getIntent();
         String tren = intent.getStringExtra("tren");
@@ -43,4 +60,15 @@ public class TripDetailMapActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        mMap = googleMap;
+        mMap.getUiSettings().setZoomControlsEnabled(true);
+
+        LatLng location = new LatLng(-12.0463731, -77.042754);
+        mMap.addMarker(new MarkerOptions().position(location).title("Mapa"));
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(location, 17));
+    }
+
 }
