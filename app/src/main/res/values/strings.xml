@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Final - grupo7</string>
     <string name="title_activity_login">LoginActivity</string>
-    <string name="prompt_email">Email</string>
+    <string name="prompt_email">Usuario</string>
     <string name="prompt_password">*********</string>
     <string name="action_sign_in">Iniciar sesión</string>
     <string name="action_sign_in_short">Iniciar sesión</string>
