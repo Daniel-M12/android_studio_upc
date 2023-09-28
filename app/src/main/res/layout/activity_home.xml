@@ -19,34 +19,52 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="172dp"
         android:fontFamily="arial"
         android:text="Hola, Juan"
-        android:textSize="22sp"
+        android:textSize="26sp"
         android:typeface="serif"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnBookTrip"
-        android:layout_width="165dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginBottom="32dp"
+        android:layout_width="199dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginBottom="16dp"
         android:text="Reservar viaje"
         app:layout_constraintBottom_toTopOf="@+id/btnBookedTrips"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnBookedTrips"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
-        android:layout_marginBottom="228dp"
+        android:layout_width="196dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="104dp"
+        android:layout_marginBottom="244dp"
         android:text="Viajes reservados"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="216dp"
+        android:text="Bienvenido a la Lina 1 de Lima"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/move_item_24px" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

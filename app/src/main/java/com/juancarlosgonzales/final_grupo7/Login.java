@@ -40,7 +40,7 @@ public class Login extends AppCompatActivity {
             return;
         }
 
-        if ("admin".equals(username) && "123".equals(password)) {
+        if ("juan".equals(username) && "123".equals(password)) {
             Intent intent = new Intent(Login.this, Home.class);
             startActivity(intent);
             finish();

@@ -63,5 +63,15 @@ public class BookTripActivity extends AppCompatActivity {
 
             startActivity(intent);
         });
+
+        Button btnCancel = findViewById(R.id.button_cancelar);
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(BookTripActivity.this, BookedTripsActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 }

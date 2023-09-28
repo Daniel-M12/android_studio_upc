@@ -8,7 +8,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.juancarlosgonzales.final_grupo7.entidades.Trip;
@@ -46,8 +48,17 @@ public class BookedTripsActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) {}
         });
-
         displayTrips();
+
+        ImageView logoutImageView = findViewById(R.id.imageView3);
+        logoutImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent loginIntent = new Intent(BookedTripsActivity.this, Login.class);
+                startActivity(loginIntent);
+                finish();
+            }
+        });
     }
 
     private void assignReferences() {

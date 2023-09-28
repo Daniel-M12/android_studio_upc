@@ -79,7 +79,7 @@ public class DAOTrip {
     public List<Trip> loadTrips(){
         List<Trip> tripList = new ArrayList<>();
         try {
-            Cursor c = db.rawQuery("SELECT * FROM trips", null);
+            Cursor c = db.rawQuery("SELECT * FROM trips ORDER BY id DESC", null);
             while (c.moveToNext()) {
                 tripList.add(new Trip(
                         c.getInt(0),
